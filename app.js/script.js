@@ -21,12 +21,6 @@ burgerBox.addEventListener("click", () => {
   bottomLine.classList.toggle("bottomChange");
 });
 
-function linesColorStay() {
-  lines.forEach((l) => {
-    l.style.backgroundColor = "#fff";
-  });
-}
-
 window.addEventListener("scroll", () => {
   if (window.scrollY > 450) {
     lines.forEach((l) => {

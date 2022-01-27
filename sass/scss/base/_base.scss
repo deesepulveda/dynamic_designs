@@ -9,7 +9,7 @@
 html {
   font-size: 62.5%; /*Equivalent to 10px*/
   scroll-behavior: smooth;
-  background-color: #fff;
+  background-color: $color-lite;
 }
 
 body {
@@ -20,5 +20,4 @@ body {
   text-transform: uppercase;
   font-family: $primary-font;
   overflow-x: hidden;
-  // color: $primary-color;
 }

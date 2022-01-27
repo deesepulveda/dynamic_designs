@@ -16,6 +16,18 @@
   left: 0;
 }
 
+@mixin absol-topRightZero {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+@mixin absol-bottomLeftZero {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;
@@ -63,11 +75,24 @@
   -o-transform: translateY(-50%);
 }
 
+@mixin rotateFortyFive {
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+}
+
 //-------WIDTH/HEIGHT MIXINS----------
 
 @mixin keep-it-hundo {
   width: 100%;
   height: 100%;
+}
+
+@mixin keep-it-hundo-view {
+  width: 100vw;
+  height: 100vh;
 }
 
 //----------SHADOW MIXINS-----------

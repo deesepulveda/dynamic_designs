@@ -92,7 +92,21 @@
         }
 
         .cta-btn-learn {
-          border: 1px solid #fff;
+          border: 1px solid $color-lite;
+
+          &:hover {
+            background-color: $color-lite;
+            color: #050505;
+          }
+        }
+
+        .cta-btn-build {
+          margin-top: 3rem;
+          background-color: $color-orange;
+
+          &:hover {
+            background-color: $color-orange-hover;
+          }
         }
       }
     }

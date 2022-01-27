@@ -1,0 +1,67 @@
+.burger {
+  width: 10rem;
+  height: 100%;
+  margin-right: 0.5rem;
+  @include absol-topRightZero;
+  @include flex-center;
+  z-index: 100;
+
+  .burger-box {
+    width: 60%;
+    height: 60%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: flex-end;
+    cursor: pointer;
+    /* overflow: hidden; */
+
+    .top,
+    .middle,
+    .bottom {
+      height: 0.2rem;
+      background-color: $color-lite;
+      @include transit3;
+    }
+
+    .top,
+    .bottom {
+      width: 4.15rem;
+    }
+
+    .middle {
+      width: 3rem;
+    }
+
+    // JS CLASS TARGET
+
+    .lineChange {
+      background-color: $color-orange;
+    }
+
+    .topChange {
+      background-color: $color-orange;
+      position: absolute;
+      transform: rotate(225deg) translate(3%, 10%);
+      -webkit-transform: rotate(225deg) translate(3%, 10%);
+      -moz-transform: rotate(225deg) translate(3%, 10%);
+      -ms-transform: rotate(225deg) translate(3%, 10%);
+      -o-transform: rotate(225deg) translate(3%, 10%);
+    }
+
+    .middleChange {
+      display: none;
+    }
+
+    .bottomChange {
+      background-color: $color-orange;
+      position: absolute;
+      transform: rotate(-225deg) translate(-3%, -4%);
+      -webkit-transform: rotate(-225deg) translate(-3%, -4%);
+      -moz-transform: rotate(-225deg) translate(-3%, -4%);
+      -ms-transform: rotate(-225deg) translate(-3%, -4%);
+      -o-transform: rotate(-225deg) translate(-3%, -4%);
+    }
+  }
+}
