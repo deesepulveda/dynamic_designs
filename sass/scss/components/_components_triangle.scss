@@ -1,0 +1,30 @@
+.triangle {
+  width: 0;
+  height: 0.1rem;
+  background-color: $color-orange;
+  position: relative;
+  @include transit3;
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  @include transformX;
+
+  &::after {
+    content: "";
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    border: 0.55rem solid $color-orange;
+    border-top-color: transparent;
+    border-left-color: transparent;
+    @include transit2;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -moz-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    -o-transform: translate(-50%, -50%) rotate(45deg);
+  }
+}
