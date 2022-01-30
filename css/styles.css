@@ -75,7 +75,7 @@ body {
   -o-transition: 0.3s ease;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .nav {
     width: 60%;
     height: 6rem;
@@ -101,7 +101,7 @@ body {
   z-index: -1;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .nav::after {
     display: none;
   }
@@ -129,7 +129,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .nav .ul {
     width: 100%;
     height: 100%;
@@ -151,7 +151,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .nav .ul .li {
     margin-top: 0;
   }
@@ -180,9 +180,9 @@ body {
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .nav .ul .li .links {
-    font-size: 2.2rem;
+    font-size: 2rem;
   }
 }
 
@@ -202,7 +202,7 @@ body {
   z-index: 100;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .burger {
     display: none;
   }
@@ -297,7 +297,7 @@ body {
   background-attachment: fixed;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .hero {
     height: 68vh;
   }
@@ -343,7 +343,7 @@ body {
   }
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .hero .hero-company .name {
     width: 55%;
   }
@@ -361,7 +361,7 @@ body {
   text-transform: initial;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .hero .hero-company .title {
     font-size: 2.25rem;
   }
@@ -378,9 +378,9 @@ body {
   align-items: center;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .hero .hero-company .cta-box {
-    width: 43%;
+    width: 45%;
     flex-direction: row;
   }
 }
@@ -431,7 +431,7 @@ body {
   background-color: #f07c2f;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .hero .hero-company .cta-box .cta-btn .cta-btn-build {
     margin-top: 0;
   }
@@ -481,7 +481,7 @@ body {
   left: 0;
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .info-pack {
     height: 32vh;
   }
@@ -663,7 +663,7 @@ body {
   -o-transform: translate(-50%, -50%) rotate(45deg);
 }
 
-@media only screen and (min-width: 1080px) {
+@media only screen and (min-width: 1024px) {
   .triangle::after {
     border: 0.42rem solid #f07c2f;
     border-top-color: transparent;
@@ -700,7 +700,7 @@ body {
   background-color: #fff;
   position: relative;
   position: absolute;
-  bottom: -8%;
+  bottom: 0;
   left: 50%;
   transform: translateX(-50%);
   -webkit-transform: translateX(-50%);
