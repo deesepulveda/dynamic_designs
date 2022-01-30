@@ -7,6 +7,16 @@
   z-index: 99;
   @include transit3;
 
+  @include tabletLandscape {
+    & {
+      width: 60%;
+      height: 6rem;
+      top: 0;
+      left: 50%;
+      @include transformX;
+    }
+  }
+
   &::after {
     content: "";
     @include keep-it-hundo;
@@ -14,6 +24,12 @@
     background-color: $color-dark;
     opacity: 0.9;
     z-index: -1;
+
+    @include tabletLandscape {
+      & {
+        display: none;
+      }
+    }
   }
 
   .ul {
@@ -25,11 +41,47 @@
     align-items: center;
     position: relative;
 
+    @include phoneLandscape {
+      & {
+        margin-top: 0;
+      }
+    }
+
+    @include tabletPortrait {
+      & {
+        margin-top: 15rem;
+      }
+    }
+
+    @include tabletLandscape {
+      & {
+        @include keep-it-hundo;
+        margin-top: 0;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+
     .li {
       list-style-type: none;
       margin-top: 3.5rem;
       position: relative;
-      // border: 1px solid green;
+
+      @include tabletPortrait {
+        & {
+          margin-top: 4rem;
+        }
+      }
+
+      @include tabletLandscape {
+        & {
+          margin-top: 0;
+        }
+
+        &:not(:last-child) {
+          margin-right: 4rem;
+        }
+      }
 
       &:hover > .triangle {
         width: 100%;
@@ -43,6 +95,18 @@
         text-decoration: none;
         color: #fff;
         font-size: 3.5rem;
+
+        @include tabletPortrait {
+          & {
+            font-size: 4rem;
+          }
+        }
+
+        @include tabletLandscape {
+          & {
+            font-size: 2.2rem;
+          }
+        }
       }
     }
   }

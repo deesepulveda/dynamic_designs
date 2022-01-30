@@ -3,6 +3,12 @@
   height: 35vh;
   @include absol-bottomLeftZero;
 
+  @include tabletLandscape {
+    & {
+      height: 32vh;
+    }
+  }
+
   .shape-box {
     width: 100%;
     height: 10%;

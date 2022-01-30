@@ -4,6 +4,12 @@
   position: relative;
   position: fixed;
   background: transparent;
-  //   border: 1px solid red;
   z-index: 5;
+
+  @include tabletPortrait {
+    & {
+      height: 6rem;
+      @include transit3;
+    }
+  }
 }
