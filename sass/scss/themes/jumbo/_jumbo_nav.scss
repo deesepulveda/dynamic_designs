@@ -10,7 +10,7 @@
   @include tabletLandscape {
     & {
       width: 60%;
-      height: 6rem;
+      height: 5rem;
       top: 0;
       left: 50%;
       @include transformX;
@@ -104,7 +104,7 @@
 
         @include tabletLandscape {
           & {
-            font-size: 2rem;
+            font-size: 1.8rem;
           }
         }
       }

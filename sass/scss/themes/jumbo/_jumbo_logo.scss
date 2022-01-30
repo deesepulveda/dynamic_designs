@@ -9,11 +9,11 @@
   justify-content: center;
   align-items: center;
 
-  // @include tabletPortrait {
-  //   & {
-  //     width: 9rem;
-  //   }
-  // }
+  @include tabletLandscape {
+    & {
+      width: 6rem;
+    }
+  }
 
   .logo-link {
     width: 60%;
