@@ -1,0 +1,22 @@
+.diamond-line {
+  width: 60%;
+  height: 0.1rem;
+  margin: 1rem auto 2rem;
+  position: relative;
+  background-color: $color-dark;
+
+  &::after {
+    content: "";
+    width: 1rem;
+    height: 1rem;
+    background-color: $color-dark;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
+    -webkit-transform: translate(-50%, -50%) rotate(45deg);
+    -moz-transform: translate(-50%, -50%) rotate(45deg);
+    -ms-transform: translate(-50%, -50%) rotate(45deg);
+    -o-transform: translate(-50%, -50%) rotate(45deg);
+  }
+}

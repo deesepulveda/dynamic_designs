@@ -11,6 +11,11 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/styles.css" />
+    <!-- SWIPER JS CDN -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
   </head>
   <body>
     <!---------- JUMBO ---------->
@@ -59,11 +64,6 @@
       </header>
       <!---- HERO ---->
       <div class="hero">
-        <img
-          src="./public/images/FireWatch-HD - Copy.jpg"
-          alt=""
-          class="hero-bg"
-        />
         <!-- company name -->
         <div class="hero-company">
           <div class="name">
@@ -86,10 +86,67 @@
           </div>
         </div>
       </div>
+      <!---- HERO BOTTOM ---->
+      <div class="info-pack">
+        <div class="shape-box">
+          <div class="shapes shape1"></div>
+          <div class="shapes shape2"></div>
+          <div class="shapes shape3"></div>
+        </div>
+        <!--  -->
+        <div class="info-container">
+          <!--  -->
+          <div class="swiper-container">
+            <!-- Additional required wrapper -->
+            <div class="swiper-wrapper">
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="info-title">Fast & Scalable</div>
+                <div class="diamond-line"></div>
+                <div class="info-content">
+                  <p>
+                    Time is money so we definitely understand what it takes to
+                    make an incredibly fast and functional design with
+                    scalability in mind to help your business grow.
+                  </p>
+                </div>
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="info-title">Customizable</div>
+                <div class="diamond-line"></div>
+                <div class="info-content">
+                  <p>
+                    Give yourself an edge with fully customizable options from
+                    colors, animations and functions. You choose what you want
+                    and let us do the rest.
+                  </p>
+                </div>
+              </div>
+              <!-- Slides -->
+              <div class="swiper-slide">
+                <div class="info-title">Modern</div>
+                <div class="diamond-line"></div>
+                <div class="info-content">
+                  <p>
+                    With the latest modern trends and designs, be sure to stand
+                    out and increase traffic flow to your site.
+                  </p>
+                </div>
+              </div>
+            </div>
+            <!-- Swiper pagination -->
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </div>
     </div>
     <!--  -->
     <div class="extra"></div>
 
+    <!------ SWIPER JS INIT ------>
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+    <script src="./app.js/vendors.js" async defer></script>
     <!-------- JAVASCRIPT -------->
     <script src="./app.js/script.js" async defer></script>
   </body>
