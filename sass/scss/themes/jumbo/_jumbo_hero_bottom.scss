@@ -3,6 +3,18 @@
   height: 35vh;
   @include absol-bottomLeftZero;
 
+  @include phoneLandscape {
+    & {
+      height: 75vh;
+    }
+  }
+
+  @include tabletPortrait {
+    & {
+      height: 35vh;
+    }
+  }
+
   @include tabletLandscape {
     & {
       height: 32vh;

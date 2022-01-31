@@ -26,7 +26,7 @@ burgerBox.addEventListener("click", () => {
 // CHANGE BURGER LINE COLOR AFTER SCROLL
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 450) {
+  if (window.scrollY > 5) {
     lines.forEach((l) => {
       l.classList.add("lineChange");
     });
@@ -37,22 +37,32 @@ window.addEventListener("scroll", () => {
   }
 });
 
-// HEADER BG COLOR APPEAR AFTER SCROLL IN LANDSCAPE MODE
+// HEADER CHANGES AFTER SCROLL
+
+const mediaQueryLandscape = window.matchMedia("(min-width: 1024px)");
+const mediaQueryPortrait = window.matchMedia("min-width: 300px");
 
 window.addEventListener("scroll", () => {
-  if (window.scrollY > 100) {
+  if (
+    window.scrollY > 1 &&
+    !nav.classList.contains("navShow") &&
+    mediaQueryLandscape.matches === true
+  ) {
     header.style.backgroundColor = "#fff";
     header.style.boxShadow = "1px 1px 5px rgba(5,5,5,.3";
     diamondEnds.style.display = "none";
-    links.forEach((li) => {
-      li.style.color = "#050505";
+    links.forEach((ln) => {
+      ln.style.color = "#050505";
     });
+  } else if (window.scrollY > 1 && mediaQueryPortrait) {
+    header.style.backgroundColor = "#fff";
+    header.style.boxShadow = "1px 1px 5px rgba(5,5,5,.3";
   } else {
     header.style.backgroundColor = "transparent";
     header.style.boxShadow = "none";
     diamondEnds.style.display = "block";
-    links.forEach((li) => {
-      li.style.color = "#fff";
+    links.forEach((ln) => {
+      ln.style.color = "#fff";
     });
   }
 });

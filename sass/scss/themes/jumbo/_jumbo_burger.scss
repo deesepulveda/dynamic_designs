@@ -27,7 +27,7 @@
       position: relative;
       position: absolute;
       right: 0;
-      @include transit3;
+      @include transit2;
     }
 
     .top,
@@ -52,7 +52,7 @@
     // JS CLASS TARGET
 
     .lineChange {
-      background-color: $color-orange;
+      background-color: $color-dark;
     }
 
     .topChange {
