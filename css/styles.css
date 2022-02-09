@@ -709,8 +709,9 @@ body {
 }
 
 .section-award {
-  height: 10rem;
-  background-color: antiquewhite;
+  height: 50rem;
+  border-top: 0.1rem solid red;
+  border-bottom: 0.1rem solid red;
 }
 
 .section-demo {
@@ -724,7 +725,22 @@ body {
   position: relative;
   position: sticky;
   top: calc(0% + 5rem);
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
   z-index: 5;
+}
+
+.section-demo .section-headwrapper .section-head,
+.section-demo .section-headwrapper .content-box {
+  opacity: 0;
+  transform: translateY(100%);
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  -ms-transform: translateY(100%);
+  -o-transform: translateY(100%);
 }
 
 .section-demo .section-headwrapper .section-head {
@@ -735,17 +751,17 @@ body {
 
 .section-demo .section-headwrapper .content-box {
   width: 100%;
-  height: 22rem;
+  height: 17rem;
   position: relative;
   background-color: #fff;
 }
 
 .section-demo .section-headwrapper .content-box .content-title {
-  width: 60%;
+  width: 70%;
   margin: 0 auto;
   position: relative;
   padding-top: 1rem;
-  font-size: 2.1rem;
+  font-size: 2.4rem;
   font-family: "GothicBold", sans-serif;
   -webkit-text-stroke: 0.1rem #f07c2f;
   -webkit-text-fill-color: transparent;
@@ -767,72 +783,224 @@ body {
 }
 
 .section-demo .section-headwrapper .content-box .content-info {
-  width: 60%;
-  margin: 1rem auto 0;
+  width: 70%;
+  margin: 1.5rem auto 0;
   font-size: 1.7rem;
   text-transform: initial;
   text-align: justify;
   text-indent: 2rem;
 }
 
-.section-demo .section-headwrapper .content-box .content-btn {
+.section-demo .box-demo-container {
   width: 100%;
   height: auto;
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.section-demo .section-headwrapper .content-box .content-btn .btn {
+  margin-top: 20rem;
   position: relative;
-  padding: 0.5rem 1rem;
-  text-decoration: none;
-  color: #050505;
-  font-size: 1.5rem;
-  letter-spacing: 0.4rem;
-  border: 0.1rem solid #050505;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
+  border: 0.1rem dotted red;
 }
 
-.section-demo .section-headwrapper .content-box .content-btn .btn:hover {
-  background-color: #f07c2f;
-  color: #fff;
-  border: 0.1rem solid #f07c2f;
-}
-
-.section-demo .box-items-container {
+.section-demo .box-demo-container .box-demo-btns-wrapper {
   width: 100%;
-  height: 60rem;
-  position: relative;
-  position: absolute;
-  top: 60%;
+  height: auto;
+  padding: 4rem 1rem;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.section-demo .box-items-container .box-items {
+.section-demo .box-demo-container .box-demo-btns-wrapper .box-demo-btns {
+  width: 15rem;
+  height: 4rem;
+  border: 0.1rem solid #050505;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-demo .box-demo-container .box-demo-btns-wrapper .box-demo-btns:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.section-demo .box-demo-container .box-demo-btns-wrapper .box-demo-btns:nth-of-type(2) {
+  border-radius: 6rem;
+  -webkit-border-radius: 6rem;
+  -moz-border-radius: 6rem;
+  -ms-border-radius: 6rem;
+  -o-border-radius: 6rem;
+}
+
+.section-demo .box-demo-container .box-demo-btns-wrapper .box-demo-btns .demo-btns {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  color: #050505;
+  font-size: 2rem;
+}
+
+.section-demo .box-demo-container .box-demo-cards-wrapper {
+  width: 100%;
+  height: auto;
+  margin-top: 7rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-demo .box-demo-container .box-demo-cards-wrapper .box-demo-cards {
+  width: 20rem;
+  height: 25rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  border: 0.1rem solid #050505;
+}
+
+.section-demo .box-demo-container .box-demo-cards-wrapper .box-demo-cards:not(:last-child) {
+  margin-bottom: 2rem;
+}
+
+.section-demo .box-demo-container .box-demo-cards-wrapper .box-demo-cards:nth-of-type(2) {
+  border-radius: 1rem;
+  -webkit-border-radius: 1rem;
+  -moz-border-radius: 1rem;
+  -ms-border-radius: 1rem;
+  -o-border-radius: 1rem;
+}
+
+.section-demo .box-demo-container .box-demo-themes-wrapper {
+  width: 100%;
+  height: 30rem;
+  margin-top: 7rem;
+  position: relative;
+  display: flex;
+  border: 0.1rem solid black;
+}
+
+.section-demo .box-demo-container .box-demo-themes-wrapper .box-demo-themes {
   width: 25rem;
-  height: 15rem;
-  background-color: green;
+  height: 20rem;
+  position: absolute;
+  border: 0.2rem solid #fff;
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
+  cursor: pointer;
 }
 
-.section-demo .box-items-container .box-items:not(:last-child) {
-  margin-bottom: 2rem;
+.section-demo .box-demo-container .box-demo-themes-wrapper .box-demo-themes:nth-of-type(1) {
+  top: 0;
+  left: 3%;
+  background: url(../public/images/section-gallery.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-demo .box-demo-container .box-demo-themes-wrapper .box-demo-themes:nth-of-type(1):hover {
+  z-index: 5;
+  transform: translateX(15%) scale(1.2);
+  -webkit-transform: translateX(15%) scale(1.2);
+  -moz-transform: translateX(15%) scale(1.2);
+  -ms-transform: translateX(15%) scale(1.2);
+  -o-transform: translateX(15%) scale(1.2);
+}
+
+.section-demo .box-demo-container .box-demo-themes-wrapper .box-demo-themes:nth-of-type(2) {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  background: url(/public/images/corsair-k100-rgb-gaming-keyboard.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-demo .box-demo-container .box-demo-themes-wrapper .box-demo-themes:nth-of-type(2):hover {
+  z-index: 5;
+  transform: translate(-50%, -50%) scale(1.2);
+  -webkit-transform: translate(-50%, -50%) scale(1.2);
+  -moz-transform: translate(-50%, -50%) scale(1.2);
+  -ms-transform: translate(-50%, -50%) scale(1.2);
+  -o-transform: translate(-50%, -50%) scale(1.2);
+}
+
+.section-demo .box-demo-container .box-demo-themes-wrapper .box-demo-themes:nth-of-type(3) {
+  bottom: 0;
+  right: 3%;
+  background: url(/public/images/LuxuryAuto-Main1.png);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.section-demo .box-demo-container .box-demo-themes-wrapper .box-demo-themes:nth-of-type(3):hover {
+  z-index: 5;
+  transform: translateX(-15%) scale(1.2);
+  -webkit-transform: translateX(-15%) scale(1.2);
+  -moz-transform: translateX(-15%) scale(1.2);
+  -ms-transform: translateX(-15%) scale(1.2);
+  -o-transform: translateX(-15%) scale(1.2);
+}
+
+.animateUp {
+  animation: animateKeysUp 0.8s ease-in-out 0.3s forwards;
+  -webkit-animation: animateKeysUp 0.8s ease-in-out 0.3s forwards;
+}
+
+.animateIn {
+  animation: animateKeysIn 0.8s ease-in-out 0.3s forwards;
+  -webkit-animation: animateKeysIn 0.8s ease-in-out 0.3s forwards;
+}
+
+@keyframes animateKeysUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes animateKeysIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
 }
 
 .sections {
@@ -841,12 +1009,41 @@ body {
 
 .section-news {
   height: 60rem;
-  background-color: aqua;
+  padding-top: 5rem;
+  position: relative;
+}
+
+.section-news::before {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: #050505;
+  opacity: 0.7;
+}
+
+.section-news::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url(../public/images/corsair-k100-rgb-gaming-keyboard.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: -1;
+}
+
+.section-news .title-news {
+  color: #fff;
 }
 
 .section-reviews {
   height: 60rem;
-  background-color: #85e7e7;
 }
 
 .triangle {
@@ -898,48 +1095,6 @@ body {
     border-top-color: transparent;
     border-left-color: transparent;
   }
-}
-
-.triangle-solid {
-  width: 80%;
-  height: 0.1rem;
-  background-color: #050505;
-  position: relative;
-  transition: 0.3s ease;
-  -webkit-transition: 0.3s ease;
-  -moz-transition: 0.3s ease;
-  -ms-transition: 0.3s ease;
-  -o-transition: 0.3s ease;
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-}
-
-.triangle-solid::after {
-  content: "";
-  width: 0;
-  height: 0;
-  border: 0.55rem solid #050505;
-  border-top-color: transparent;
-  border-left-color: transparent;
-  transition: 0.2s ease;
-  -webkit-transition: 0.2s ease;
-  -moz-transition: 0.2s ease;
-  -ms-transition: 0.2s ease;
-  -o-transition: 0.2s ease;
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -50%) rotate(45deg);
-  -webkit-transform: translate(-50%, -50%) rotate(45deg);
-  -moz-transform: translate(-50%, -50%) rotate(45deg);
-  -ms-transform: translate(-50%, -50%) rotate(45deg);
-  -o-transform: translate(-50%, -50%) rotate(45deg);
 }
 
 .diamond-line {
@@ -1049,6 +1204,48 @@ body {
   width: 0;
   height: 0;
   border: 0.55rem solid #050505;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.section-title .triangle-solid-news {
+  width: 80%;
+  height: 0.1rem;
+  background-color: #fff;
+  position: relative;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.section-title .triangle-solid-news::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0.55rem solid #fff;
   border-top-color: transparent;
   border-left-color: transparent;
   transition: 0.2s ease;

@@ -1,4 +1,30 @@
 .section-news {
   height: 60rem;
-  background-color: aqua;
+  padding-top: 5rem;
+
+  position: relative;
+
+  &::before {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background-color: $color-dark;
+    opacity: 0.7;
+    // z-index: -1;
+  }
+
+  &::after {
+    content: "";
+    @include keep-it-hundo;
+    @include absol-topLeftZero;
+    background: url(../public/images/corsair-k100-rgb-gaming-keyboard.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -1;
+  }
+
+  .title-news {
+    color: $color-lite;
+  }
 }

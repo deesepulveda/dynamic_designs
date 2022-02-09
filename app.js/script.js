@@ -67,6 +67,8 @@ window.addEventListener("scroll", () => {
   }
 });
 
+// CAROUSEL SLIDER
+
 const slides = document.querySelectorAll(".slides");
 const dots = document.querySelectorAll(".dots");
 
@@ -84,37 +86,29 @@ dots.forEach((d) => {
 
 const boxItems = document.querySelectorAll(".box-items");
 const boxContainer = document.querySelector(".box-items-container");
+const sectionHeadWrapper = document.querySelector(".section-headwrapper");
+const sectionHead = document.querySelector(".section-head");
+const contentBox = document.querySelector(".content-box");
+const sectionTitle = document.querySelectorAll(".section-title");
 
-document.addEventListener("scroll", () => {
-  boxItems.forEach((b) => {
+document,
+  addEventListener("scroll", () => {
+    console.log(sectionHeadWrapper.getBoundingClientRect().top);
     if (
-      b.getBoundingClientRect().top < 650 &&
-      b.getBoundingClientRect().top > 400
+      sectionHeadWrapper.getBoundingClientRect().top < 800 &&
+      sectionHead.getBoundingClientRect().top < 800
     ) {
-      b.style.opacity = "1";
+      // sectionTitle.forEach((t) => {
+      //   t.classList.add("animateUp");
+      // });
+      sectionHead.classList.add("animateUp");
+      contentBox.classList.add("animateUp");
+      contentBox.style.transitionDelay = ".6s";
     } else {
-      b.style.opacity = "0";
+      // sectionTitle.forEach((t) => {
+      //   t.classList.remove("animateUp");
+      // });
+      sectionHead.classList.remove("animateUp");
+      contentBox.classList.remove("animateUp");
     }
   });
-});
-
-// let options = {
-//   root: null,
-//   rootMargin: "10px",
-//   threshold: [0.6, 0.6],
-// };
-
-// let observer = new IntersectionObserver((entries) => {
-//   console.log(entries);
-//   entries.forEach((entry) => {
-//     if (entry.isIntersecting) {
-//       entry.target.style.transform = "scale(1)";
-//     } else {
-//       entry.target.style.transform = "scale(0)";
-//     }
-//   });
-// });
-
-// boxItems.forEach((b) => {
-//   observer.observe(b);
-// });

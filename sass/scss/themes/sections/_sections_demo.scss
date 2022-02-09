@@ -8,7 +8,18 @@
     position: relative;
     position: sticky;
     top: calc(0% + 5rem);
+    @include transit3;
     z-index: 5;
+
+    .section-head,
+    .content-box {
+      opacity: 0;
+      transform: translateY(100%);
+      -webkit-transform: translateY(100%);
+      -moz-transform: translateY(100%);
+      -ms-transform: translateY(100%);
+      -o-transform: translateY(100%);
+    }
 
     .section-head {
       width: 100%;
@@ -18,17 +29,16 @@
 
     .content-box {
       width: 100%;
-      height: 22rem;
-      // margin-top: 2rem;
+      height: 17rem;
       position: relative;
       background-color: $color-lite;
 
       .content-title {
-        width: 60%;
+        width: 70%;
         margin: 0 auto;
         position: relative;
         padding-top: 1rem;
-        font-size: 2.1rem;
+        font-size: 2.4rem;
         font-family: $quaternary-font;
         -webkit-text-stroke: 0.1rem $color-orange;
         -webkit-text-fill-color: transparent;
@@ -43,64 +53,211 @@
       }
 
       .content-info {
-        width: 60%;
-        margin: 1rem auto 0;
+        width: 70%;
+        margin: 1.5rem auto 0;
         font-size: 1.7rem;
         text-transform: initial;
         text-align: justify;
         text-indent: 2rem;
       }
+    }
+  }
 
-      .content-btn {
-        width: 100%;
-        height: auto;
-        margin-top: 2rem;
-        // border: 1px solid red;
+  .box-demo-container {
+    width: 100%;
+    height: auto;
+    margin-top: 20rem;
+    position: relative;
+    border: 0.1rem dotted red;
+
+    .box-demo-btns-wrapper {
+      width: 100%;
+      height: auto;
+      padding: 4rem 1rem;
+      // border: 0.1rem dotted green;
+      @include flex-center;
+      flex-direction: column;
+
+      .box-demo-btns {
+        width: 15rem;
+        height: 4rem;
+        border: 0.1rem solid $color-dark;
         @include flex-center;
 
-        .btn {
-          position: relative;
-          padding: 0.5rem 1rem;
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        &:nth-of-type(2) {
+          border-radius: 6rem;
+          -webkit-border-radius: 6rem;
+          -moz-border-radius: 6rem;
+          -ms-border-radius: 6rem;
+          -o-border-radius: 6rem;
+        }
+
+        .demo-btns {
+          @include keep-it-hundo;
+          @include flex-center;
           text-decoration: none;
           color: $color-dark;
-          font-size: 1.5rem;
-          letter-spacing: 0.4rem;
-          border: 0.1rem solid $color-dark;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          @include transit3;
+          font-size: 2rem;
+        }
+      }
+    }
+
+    .box-demo-cards-wrapper {
+      width: 100%;
+      height: auto;
+      margin-top: 7rem;
+      // border: 0.1rem dotted rgb(7, 243, 7);
+      @include flex-center;
+      flex-direction: column;
+
+      .box-demo-cards {
+        width: 20rem;
+        height: 25rem;
+        @include flex-center;
+        cursor: pointer;
+        border: 0.1rem solid $color-dark;
+
+        &:not(:last-child) {
+          margin-bottom: 2rem;
+        }
+
+        &:nth-of-type(2) {
+          border-radius: 1rem;
+          -webkit-border-radius: 1rem;
+          -moz-border-radius: 1rem;
+          -ms-border-radius: 1rem;
+          -o-border-radius: 1rem;
+        }
+      }
+    }
+
+    .box-demo-themes-wrapper {
+      width: 100%;
+      height: 30rem;
+      margin-top: 7rem;
+      position: relative;
+      display: flex;
+      border: 0.1rem solid black;
+
+      .box-demo-themes {
+        width: 25rem;
+        height: 20rem;
+        position: absolute;
+        border: 0.2rem solid $color-lite;
+        @include transit3;
+        cursor: pointer;
+
+        &:nth-of-type(1) {
+          top: 0;
+          left: 3%;
+          background: url(../public/images/section-gallery.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
 
           &:hover {
-            background-color: $color-orange;
-            color: $color-lite;
-            border: 0.1rem solid $color-orange;
+            z-index: 5;
+            transform: translateX(15%) scale(1.2);
+            -webkit-transform: translateX(15%) scale(1.2);
+            -moz-transform: translateX(15%) scale(1.2);
+            -ms-transform: translateX(15%) scale(1.2);
+            -o-transform: translateX(15%) scale(1.2);
+          }
+        }
+
+        &:nth-of-type(2) {
+          @include absol-center;
+          background: url(/public/images/corsair-k100-rgb-gaming-keyboard.jpg);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          &:hover {
+            z-index: 5;
+            transform: translate(-50%, -50%) scale(1.2);
+            -webkit-transform: translate(-50%, -50%) scale(1.2);
+            -moz-transform: translate(-50%, -50%) scale(1.2);
+            -ms-transform: translate(-50%, -50%) scale(1.2);
+            -o-transform: translate(-50%, -50%) scale(1.2);
+          }
+        }
+
+        &:nth-of-type(3) {
+          bottom: 0;
+          right: 3%;
+          background: url(/public/images/LuxuryAuto-Main1.png);
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+
+          &:hover {
+            z-index: 5;
+            transform: translateX(-15%) scale(1.2);
+            -webkit-transform: translateX(-15%) scale(1.2);
+            -moz-transform: translateX(-15%) scale(1.2);
+            -ms-transform: translateX(-15%) scale(1.2);
+            -o-transform: translateX(-15%) scale(1.2);
           }
         }
       }
     }
   }
+}
 
-  .box-items-container {
-    width: 100%;
-    height: 60rem;
-    position: relative;
-    position: absolute;
-    top: 60%;
-    @include flex-center;
-    flex-direction: column;
-    // opacity: 0;
+// ANIMATION CLASSES
 
-    .box-items {
-      width: 25rem;
-      height: 15rem;
-      background-color: green;
-      // opacity: 0;
-      @include transit3;
+.animateUp {
+  animation: animateKeysUp 0.8s ease-in-out 0.3s forwards;
+  -webkit-animation: animateKeysUp 0.8s ease-in-out 0.3s forwards;
+}
 
-      &:not(:last-child) {
-        margin-bottom: 2rem;
-      }
-    }
+.animateIn {
+  animation: animateKeysIn 0.8s ease-in-out 0.3s forwards;
+  -webkit-animation: animateKeysIn 0.8s ease-in-out 0.3s forwards;
+}
+
+// KEYFRAMES FOR ANIMATIONS
+
+@keyframes animateKeysUp {
+  from {
+    opacity: 0;
+    transform: translateY(100%);
+    -webkit-transform: translateY(100%);
+    -moz-transform: translateY(100%);
+    -ms-transform: translateY(100%);
+    -o-transform: translateY(100%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes animateKeysIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 }
