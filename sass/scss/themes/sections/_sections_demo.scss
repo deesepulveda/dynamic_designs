@@ -1,0 +1,73 @@
+.section-demo {
+  height: 150rem;
+
+  .section-headwrapper {
+    position: relative;
+    position: sticky;
+    top: 13%;
+    // border: 0.1rem solid red;
+
+    .content-box {
+      width: 100%;
+      height: 22rem;
+      // border-bottom: 1px solid green;
+
+      .content-title {
+        width: 60%;
+        margin: 0 auto;
+        position: relative;
+        padding-top: 1rem;
+        font-size: 2.1rem;
+        font-family: $quaternary-font;
+        -webkit-text-stroke: 0.1rem $color-orange;
+        -webkit-text-fill-color: transparent;
+        // border: 1px solid red;
+
+        &::after {
+          content: "";
+          width: 100%;
+          height: 0.15rem;
+          @include absol-bottomCenter;
+          background-color: $color-dark;
+        }
+      }
+
+      .content-info {
+        width: 60%;
+        margin: 1rem auto 0;
+        font-size: 1.7rem;
+        text-transform: initial;
+        text-align: justify;
+        text-indent: 2rem;
+      }
+
+      .content-btn {
+        width: 100%;
+        height: auto;
+        margin-top: 2rem;
+        // border: 1px solid red;
+        @include flex-center;
+
+        .btn {
+          position: relative;
+          padding: 0.5rem 1rem;
+          text-decoration: none;
+          color: $color-dark;
+          font-size: 1.5rem;
+          letter-spacing: 0.4rem;
+          border: 0.1rem solid $color-dark;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          @include transit3;
+
+          &:hover {
+            background-color: $color-orange;
+            color: $color-lite;
+            border: 0.1rem solid $color-orange;
+          }
+        }
+      }
+    }
+  }
+}

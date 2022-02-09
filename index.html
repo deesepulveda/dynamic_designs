@@ -11,11 +11,6 @@
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="./css/styles.css" />
-    <!-- SWIPER JS CDN -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/swiper/swiper-bundle.min.css"
-    />
   </head>
   <body>
     <!---------- JUMBO ---------->
@@ -97,11 +92,11 @@
         <!--  -->
         <div class="info-container">
           <!--  -->
-          <div class="swiper-container">
-            <!-- Additional required wrapper -->
-            <div class="swiper-wrapper">
+          <div class="slider-container">
+            <!--  -->
+            <div class="slider-wrapper">
               <!-- Slides -->
-              <div class="swiper-slide">
+              <div class="slides slide1">
                 <div class="info-title">Fast & Scalable</div>
                 <div class="diamond-line"></div>
                 <div class="info-content">
@@ -113,7 +108,7 @@
                 </div>
               </div>
               <!-- Slides -->
-              <div class="swiper-slide">
+              <div class="slides slide2">
                 <div class="info-title">Customizable</div>
                 <div class="diamond-line"></div>
                 <div class="info-content">
@@ -125,7 +120,7 @@
                 </div>
               </div>
               <!-- Slides -->
-              <div class="swiper-slide">
+              <div class="slides slide3">
                 <div class="info-title">Modern</div>
                 <div class="diamond-line"></div>
                 <div class="info-content">
@@ -136,19 +131,45 @@
                 </div>
               </div>
             </div>
-            <!-- Swiper pagination -->
-            <div class="swiper-pagination"></div>
+            <div class="pagination">
+              <div class="dots dot1"></div>
+              <div class="dots dot2"></div>
+              <div class="dots dot3"></div>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!--  -->
-    <div class="extra"></div>
+    <!---------- SECTIONS ---------->
+    <!-- SECTION AWARD -->
+    <section class="sections section-award"></section>
+    <!-- SECTION DEMO -->
+    <section class="sections section-demo">
+      <div class="section-headwrapper">
+        <!--  -->
+        <div class="section-title">
+          <h2 class="title">Customization</h2>
+          <div class="triangle-solid"></div>
+        </div>
+        <!--  -->
+        <div class="content-box">
+          <h3 class="content-title">Let Us Do The Work</h3>
+          <div class="content-info">
+            Choose from different styles, colors, and animations and let us do
+            the rest while you focus on your business! Mix and match or request
+            fully custom.
+          </div>
+          <div class="content-btn"><a href="#" class="btn">View More</a></div>
+        </div>
+      </div>
+    </section>
+    <!-- SECTION NEWS -->
+    <section class="sections section-news"></section>
+    <!-- SECTION REVIEWS -->
+    <section class="sections section-reviews"></section>
 
-    <!------ SWIPER JS INIT ------>
-    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-    <script src="./app.js/vendors.js" async defer></script>
     <!-------- JAVASCRIPT -------->
     <script src="./app.js/script.js" async defer></script>
+    <script src="./app.js/vendors.js" async defer></script>
   </body>
 </html>

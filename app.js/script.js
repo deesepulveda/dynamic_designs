@@ -66,3 +66,16 @@ window.addEventListener("scroll", () => {
     });
   }
 });
+
+const slides = document.querySelectorAll(".slides");
+const dots = document.querySelectorAll(".dots");
+
+// PAGINATIONS
+
+let i = 0;
+
+dots.forEach((d) => {
+  d.addEventListener("click", () => {
+    console.log(slides[i]);
+  });
+});

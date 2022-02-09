@@ -21,6 +21,8 @@
     }
   }
 
+  // BORDER SHAPE CUTOUT
+
   .shape-box {
     width: 100%;
     height: 10%;
@@ -80,20 +82,29 @@
     }
   }
 
+  // SLIDER CAROUSEL
+
   .info-container {
     width: 100%;
     height: 90%;
+    margin: 0 auto;
+    max-width: 120rem;
     overflow-x: hidden;
 
-    .swiper-container {
+    .slider-container {
+      position: relative;
       @include keep-it-hundo;
-      // overflow-x: hidden;
 
-      .swiper-wrapper {
+      .slider-wrapper {
+        position: relative;
         @include keep-it-hundo;
 
-        .swiper-slide {
-          // background-color: antiquewhite;
+        .slides {
+          @include keep-it-hundo;
+          position: absolute;
+          top: 0;
+          background-color: $color-lite;
+          @include transit4;
 
           .info-title {
             font-size: 2.25rem;
@@ -109,37 +120,42 @@
             text-indent: 2rem;
           }
         }
+
+        .slide1 {
+          left: 0;
+        }
+
+        .slide2 {
+          left: 100%;
+        }
+
+        .slide3 {
+          left: 200%;
+        }
       }
 
-      .swiper-pagination {
-        height: 3rem;
+      .pagination {
+        width: 50%;
+        height: 4rem;
+        margin: 0 auto 0.5rem;
+        @include absol-bottomCenter;
+        z-index: 10;
+        display: flex;
+        justify-content: center;
+        align-items: center;
 
-        .swiper-pagination-bullet {
+        .dots {
           width: 1rem;
           height: 1rem;
-          background-color: transparent;
-          opacity: 1;
-          border-radius: 0;
-          -webkit-border-radius: 0;
-          -moz-border-radius: 0;
-          -ms-border-radius: 0;
-          -o-border-radius: 0;
-          border: 0.1rem solid $color-dark;
-          transform: rotate(45deg);
-          -webkit-transform: rotate(45deg);
-          -moz-transform: rotate(45deg);
-          -ms-transform: rotate(45deg);
-          -o-transform: rotate(45deg);
-        }
+          border: 0.5px solid $color-dark;
+          // background-color: $color-dark;
+          @include rotateFortyFive;
+          cursor: pointer;
 
-        .swiper-pagination-bullet-active {
-          background-color: $color-dark;
+          &:not(:last-child) {
+            margin-right: 0.75rem;
+          }
         }
-      }
-
-      .swiper-pagination-bullets {
-        width: 100%;
-        z-index: 2;
       }
     }
   }

@@ -10,6 +10,17 @@
   -o-transform: translate(-50%, -50%);
 }
 
+@mixin absol-bottomCenter {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
 @mixin absol-topLeftZero {
   position: absolute;
   top: 0;
@@ -81,6 +92,14 @@
   -moz-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   -o-transform: rotate(45deg);
+}
+
+@mixin translateXZero {
+  transform: translateX(0);
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  -ms-transform: translateX(0);
+  -o-transform: translateX(0);
 }
 
 //-------WIDTH/HEIGHT MIXINS----------
