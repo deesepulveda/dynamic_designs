@@ -42,22 +42,16 @@ body {
 
 .header {
   width: 100vw;
-  height: 7rem;
+  height: 5rem;
   position: relative;
   position: fixed;
   background: transparent;
   z-index: 25;
-}
-
-@media only screen and (min-width: 768px) {
-  .header {
-    height: 5rem;
-    transition: 0.3s ease;
-    -webkit-transition: 0.3s ease;
-    -moz-transition: 0.3s ease;
-    -ms-transition: 0.3s ease;
-    -o-transition: 0.3s ease;
-  }
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
 }
 
 .nav {
@@ -265,6 +259,7 @@ body {
 }
 
 .burger .burger-box .topChange {
+  width: 3rem;
   background-color: #f07c2f;
   position: absolute;
   top: 50%;
@@ -280,6 +275,7 @@ body {
 }
 
 .burger .burger-box .bottomChange {
+  width: 3rem;
   background-color: #f07c2f;
   position: absolute;
   top: 50%;
@@ -482,9 +478,8 @@ body {
 }
 
 .logo-box {
-  width: 8rem;
+  width: 6rem;
   height: 100%;
-  /* border: 1px solid green; */
   position: absolute;
   top: 0;
   left: 0;
@@ -714,7 +709,7 @@ body {
 }
 
 .section-award {
-  height: 50rem;
+  height: 10rem;
   background-color: antiquewhite;
 }
 
@@ -724,10 +719,18 @@ body {
 }
 
 .section-demo .section-headwrapper {
+  width: 100%;
+  height: auto;
   position: relative;
   position: sticky;
-  top: 13%;
+  top: calc(0% + 5rem);
   z-index: 5;
+}
+
+.section-demo .section-headwrapper .section-head {
+  width: 100%;
+  height: 8rem;
+  background-color: #fff;
 }
 
 .section-demo .section-headwrapper .content-box {
@@ -760,7 +763,7 @@ body {
   -moz-transform: translateX(-50%);
   -ms-transform: translateX(-50%);
   -o-transform: translateX(-50%);
-  background-color: #050505;
+  border-bottom: 0.1rem dotted #050505;
 }
 
 .section-demo .section-headwrapper .content-box .content-info {
@@ -805,33 +808,31 @@ body {
   border: 0.1rem solid #f07c2f;
 }
 
-.section-demo .box-items {
-  width: 24rem;
-  height: 10rem;
-  margin-bottom: 2rem;
-  background-color: green;
+.section-demo .box-items-container {
+  width: 100%;
+  height: 60rem;
+  position: relative;
   position: absolute;
-  top: 80vh;
-  left: 50%;
-  transform: translateX(-50%);
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
+  top: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-demo .box-items-container .box-items {
+  width: 25rem;
+  height: 15rem;
+  background-color: green;
   transition: 0.3s ease;
   -webkit-transition: 0.3s ease;
   -moz-transition: 0.3s ease;
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
-  opacity: 0;
 }
 
-.section-demo .box-items:nth-of-type(2) {
-  top: 110vh;
-}
-
-.section-demo .box-items:nth-of-type(3) {
-  top: 140vh;
+.section-demo .box-items-container .box-items:not(:last-child) {
+  margin-bottom: 2rem;
 }
 
 .sections {
@@ -1011,8 +1012,9 @@ body {
 
 .section-title {
   width: 100%;
-  height: 4rem;
-  margin: 2rem auto;
+  height: 6rem;
+  margin: 0 auto;
+  padding-top: 2rem;
   position: relative;
 }
 
@@ -1020,5 +1022,47 @@ body {
   font-size: 3rem;
   letter-spacing: 0.5rem;
   font-family: "Barlow Condensed", sans-serif;
+}
+
+.section-title .triangle-solid {
+  width: 80%;
+  height: 0.1rem;
+  background-color: #050505;
+  position: relative;
+  transition: 0.3s ease;
+  -webkit-transition: 0.3s ease;
+  -moz-transition: 0.3s ease;
+  -ms-transition: 0.3s ease;
+  -o-transition: 0.3s ease;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+}
+
+.section-title .triangle-solid::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border: 0.55rem solid #050505;
+  border-top-color: transparent;
+  border-left-color: transparent;
+  transition: 0.2s ease;
+  -webkit-transition: 0.2s ease;
+  -moz-transition: 0.2s ease;
+  -ms-transition: 0.2s ease;
+  -o-transition: 0.2s ease;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+  -webkit-transform: translate(-50%, -50%) rotate(45deg);
+  -moz-transform: translate(-50%, -50%) rotate(45deg);
+  -ms-transform: translate(-50%, -50%) rotate(45deg);
+  -o-transform: translate(-50%, -50%) rotate(45deg);
 }
 /*# sourceMappingURL=styles.css.map */

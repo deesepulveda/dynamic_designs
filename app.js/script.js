@@ -83,16 +83,7 @@ dots.forEach((d) => {
 // SECTION DEMO ITEMS APPEAR AFTER SCROLL
 
 const boxItems = document.querySelectorAll(".box-items");
-
-// boxItems.forEach((b) => {
-//   console.log(b.getBoundingClientRect());
-// });
-
-// document.addEventListener("scroll", () => {
-//   boxItems.forEach((b) => {
-//     console.log(b.getBoundingClientRect());
-//   });
-// });
+const boxContainer = document.querySelector(".box-items-container");
 
 document.addEventListener("scroll", () => {
   boxItems.forEach((b) => {
@@ -106,3 +97,24 @@ document.addEventListener("scroll", () => {
     }
   });
 });
+
+// let options = {
+//   root: null,
+//   rootMargin: "10px",
+//   threshold: [0.6, 0.6],
+// };
+
+// let observer = new IntersectionObserver((entries) => {
+//   console.log(entries);
+//   entries.forEach((entry) => {
+//     if (entry.isIntersecting) {
+//       entry.target.style.transform = "scale(1)";
+//     } else {
+//       entry.target.style.transform = "scale(0)";
+//     }
+//   });
+// });
+
+// boxItems.forEach((b) => {
+//   observer.observe(b);
+// });
