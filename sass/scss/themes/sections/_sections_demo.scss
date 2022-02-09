@@ -1,16 +1,19 @@
 .section-demo {
-  height: 150rem;
+  height: 250rem;
+  position: relative;
 
   .section-headwrapper {
     position: relative;
     position: sticky;
     top: 13%;
+    z-index: 5;
     // border: 0.1rem solid red;
 
     .content-box {
       width: 100%;
       height: 22rem;
-      // border-bottom: 1px solid green;
+      position: relative;
+      background-color: $color-lite;
 
       .content-title {
         width: 60%;
@@ -69,5 +72,26 @@
         }
       }
     }
+  }
+
+  .box-items {
+    width: 24rem;
+    height: 10rem;
+    margin-bottom: 2rem;
+    background-color: green;
+    position: absolute;
+    top: 80vh;
+    left: 50%;
+    @include transformX;
+    @include transit3;
+    opacity: 0;
+  }
+
+  .box-items:nth-of-type(2) {
+    top: 110vh;
+  }
+
+  .box-items:nth-of-type(3) {
+    top: 140vh;
   }
 }

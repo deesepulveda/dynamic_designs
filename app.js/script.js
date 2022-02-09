@@ -79,3 +79,30 @@ dots.forEach((d) => {
     console.log(slides[i]);
   });
 });
+
+// SECTION DEMO ITEMS APPEAR AFTER SCROLL
+
+const boxItems = document.querySelectorAll(".box-items");
+
+// boxItems.forEach((b) => {
+//   console.log(b.getBoundingClientRect());
+// });
+
+// document.addEventListener("scroll", () => {
+//   boxItems.forEach((b) => {
+//     console.log(b.getBoundingClientRect());
+//   });
+// });
+
+document.addEventListener("scroll", () => {
+  boxItems.forEach((b) => {
+    if (
+      b.getBoundingClientRect().top < 650 &&
+      b.getBoundingClientRect().top > 400
+    ) {
+      b.style.opacity = "1";
+    } else {
+      b.style.opacity = "0";
+    }
+  });
+});
