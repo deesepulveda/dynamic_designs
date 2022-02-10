@@ -93,10 +93,13 @@ const sectionTitle = document.querySelectorAll(".section-title");
 const demoBtnsWrapper = document.querySelector(".box-demo-btns-wrapper");
 const demoCardsWrapper = document.querySelector(".box-demo-cards-wrapper");
 const demoThemesWrapper = document.querySelector(".box-demo-themes-wrapper");
+const boxDemoCards = document.querySelectorAll(".box-demo-cards");
+
+// CUSTOMIZATION HEADER FADE UP EFFECT
 
 document,
   addEventListener("scroll", () => {
-    console.log(sectionHeadWrapper.getBoundingClientRect().top);
+    // console.log(sectionHeadWrapper.getBoundingClientRect().top);
     if (
       sectionHeadWrapper.getBoundingClientRect().top < 800 &&
       sectionHead.getBoundingClientRect().top < 800
@@ -109,3 +112,36 @@ document,
       contentBox.classList.remove("animateUp");
     }
   });
+
+// BTN WRAPPER FADE IN & OUT AFTER SCROLL EFFECT
+
+document,
+  addEventListener("scroll", () => {
+    // console.log(demoBtnsWrapper.getBoundingClientRect().top);
+    if (
+      demoBtnsWrapper.getBoundingClientRect().top < 560 &&
+      demoBtnsWrapper.getBoundingClientRect().top > 200
+    ) {
+      demoBtnsWrapper.style.opacity = "1";
+      demoBtnsWrapper.style.transition = ".5s";
+    } else {
+      demoBtnsWrapper.style.opacity = "0";
+    }
+  });
+
+// CARDS FADE IN & OUT AFTER SCROLL EFFECT
+
+document.addEventListener("scroll", () => {
+  boxDemoCards.forEach((c) => {
+    // console.log(c.getBoundingClientRect().top);
+    if (
+      c.getBoundingClientRect().top < 500 &&
+      c.getBoundingClientRect().top > 200
+    ) {
+      c.style.opacity = "1";
+      c.style.transition = ".5s";
+    } else {
+      c.style.opacity = "0";
+    }
+  });
+});

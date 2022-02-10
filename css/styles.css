@@ -709,8 +709,13 @@ body {
 }
 
 .section-award {
-  height: 50rem;
-  border-top: 0.1rem solid red;
+  height: 45rem;
+  background: url(../public/images/DDLogo.png);
+  background-position: center;
+  background-size: 30rem auto;
+  background-repeat: no-repeat;
+  filter: drop-shadow(1rem 1rem 1rem #0a0a0a55);
+  -webkit-filter: drop-shadow(1rem 1rem 1rem #0a0a0a55);
 }
 
 .section-demo {
@@ -730,6 +735,7 @@ body {
   -ms-transition: 0.3s ease;
   -o-transition: 0.3s ease;
   z-index: 5;
+  background-color: #fff;
 }
 
 .section-demo .section-headwrapper .section-head,
@@ -745,21 +751,19 @@ body {
 .section-demo .section-headwrapper .section-head {
   width: 100%;
   height: 8rem;
-  background-color: #fff;
 }
 
 .section-demo .section-headwrapper .content-box {
   width: 100%;
-  height: 17rem;
+  height: 15rem;
   position: relative;
-  background-color: #fff;
 }
 
 .section-demo .section-headwrapper .content-box .content-title {
   width: 70%;
   margin: 0 auto;
   position: relative;
-  padding-top: 1rem;
+  padding-top: 0.5rem;
   font-size: 2.4rem;
   font-family: "GothicBold", sans-serif;
   -webkit-text-stroke: 0.1rem #f07c2f;
@@ -793,7 +797,7 @@ body {
 .section-demo .box-demo-container {
   width: 100%;
   height: auto;
-  margin-top: 20rem;
+  margin-top: 30rem;
   position: relative;
 }
 
@@ -805,6 +809,7 @@ body {
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  opacity: 0;
 }
 
 .section-demo .box-demo-container .box-demo-btns-wrapper .box-demo-btns {
@@ -842,7 +847,7 @@ body {
 .section-demo .box-demo-container .box-demo-cards-wrapper {
   width: 100%;
   height: auto;
-  margin-top: 10rem;
+  margin-top: 20rem;
   display: flex;
   justify-content: center;
   align-items: center;
