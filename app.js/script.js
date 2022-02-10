@@ -90,6 +90,9 @@ const sectionHeadWrapper = document.querySelector(".section-headwrapper");
 const sectionHead = document.querySelector(".section-head");
 const contentBox = document.querySelector(".content-box");
 const sectionTitle = document.querySelectorAll(".section-title");
+const demoBtnsWrapper = document.querySelector(".box-demo-btns-wrapper");
+const demoCardsWrapper = document.querySelector(".box-demo-cards-wrapper");
+const demoThemesWrapper = document.querySelector(".box-demo-themes-wrapper");
 
 document,
   addEventListener("scroll", () => {
@@ -98,16 +101,10 @@ document,
       sectionHeadWrapper.getBoundingClientRect().top < 800 &&
       sectionHead.getBoundingClientRect().top < 800
     ) {
-      // sectionTitle.forEach((t) => {
-      //   t.classList.add("animateUp");
-      // });
       sectionHead.classList.add("animateUp");
       contentBox.classList.add("animateUp");
       contentBox.style.transitionDelay = ".6s";
     } else {
-      // sectionTitle.forEach((t) => {
-      //   t.classList.remove("animateUp");
-      // });
       sectionHead.classList.remove("animateUp");
       contentBox.classList.remove("animateUp");
     }
