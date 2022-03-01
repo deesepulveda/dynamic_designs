@@ -5,11 +5,24 @@
   padding-top: 2rem;
   position: relative;
 
-  .title {
+  .titles {
     font-size: 3rem;
     letter-spacing: 0.5rem;
     font-family: $primary-font;
+    opacity: 0;
+    @include transit4;
+
+    @include tabletPortrait {
+      & {
+        width: 80%;
+        margin: 0 auto;
+        padding-left: 1rem;
+        text-align: start;
+      }
+    }
   }
+
+  //
 
   .triangle-solid {
     width: 80%;
@@ -42,6 +55,8 @@
     }
   }
 
+  //
+
   .triangle-solid-news {
     width: 80%;
     height: 0.1rem;
@@ -71,5 +86,76 @@
       -ms-transform: translate(-50%, -50%) rotate(45deg);
       -o-transform: translate(-50%, -50%) rotate(45deg);
     }
+  }
+}
+
+// *********************************************************** //
+
+// ANIMATION CLASSES
+
+.showOpacity {
+  animation: opace 0.8s ease-in-out 0.4s forwards;
+  -webkit-animation: opace 0.8s ease-in-out 0.4s forwards;
+}
+
+.animateUp {
+  animation: animateKeysUp 0.8s ease-in-out 0.4s forwards;
+  -webkit-animation: animateKeysUp 0.8s ease-in-out 0.4s forwards;
+}
+
+.animateIn {
+  animation: animateKeysIn 0.5s ease-in-out 0.2s forwards;
+  -webkit-animation: animateKeysIn 0.5s ease-in-out 0.2s forwards;
+}
+
+// KEYFRAMES FOR ANIMATIONS
+
+@keyframes opace {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes animateKeysUp {
+  from {
+    opacity: 0;
+    transform: translateY(400%);
+    -webkit-transform: translateY(400%);
+    -moz-transform: translateY(400%);
+    -ms-transform: translateY(400%);
+    -o-transform: translateY(400%);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+  }
+}
+
+@keyframes animateKeysIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
   }
 }

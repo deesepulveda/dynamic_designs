@@ -1,4 +1,54 @@
 .sections {
   width: 100%;
-  // height: auto;
+  opacity: 0;
+  @include transit3;
+
+  .section-headwrapper {
+    width: 100%;
+    height: auto;
+    position: relative;
+    @include transit3;
+    z-index: 5;
+  }
+
+  .sticky-headwrapper {
+    position: sticky;
+    top: calc(0% + 5rem);
+  }
+}
+
+.sections-awards,
+.sections-demo,
+.sections-reviews {
+  max-width: 12rem;
+  margin: 0 auto;
+}
+
+// *********************************************************** //
+
+.show {
+  animation: animateKeysIn 0.6s linear 0.2s both;
+  -webkit-animation: animateKeysIn 0.6s linear 0.2s both;
+}
+
+// *********************************************************** //
+
+@keyframes animateKeysIn {
+  from {
+    opacity: 0;
+    transform: translateX(-100vw);
+    -webkit-transform: translateX(-100vw);
+    -moz-transform: translateX(-100vw);
+    -ms-transform: translateX(-100vw);
+    -o-transform: translateX(-100vw);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+    -webkit-transform: translateX(0);
+    -moz-transform: translateX(0);
+    -ms-transform: translateX(0);
+    -o-transform: translateX(0);
+  }
 }

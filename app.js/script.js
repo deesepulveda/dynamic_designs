@@ -82,66 +82,59 @@ dots.forEach((d) => {
   });
 });
 
-// SECTION DEMO ITEMS APPEAR AFTER SCROLL
+// ********************************************************************* //
 
-const boxItems = document.querySelectorAll(".box-items");
-const boxContainer = document.querySelector(".box-items-container");
-const sectionHeadWrapper = document.querySelector(".section-headwrapper");
-const sectionHead = document.querySelector(".section-head");
+const sections = document.querySelectorAll(".sections");
 const contentBox = document.querySelector(".content-box");
-const sectionTitle = document.querySelectorAll(".section-title");
-const demoBtnsWrapper = document.querySelector(".box-demo-btns-wrapper");
-const demoCardsWrapper = document.querySelector(".box-demo-cards-wrapper");
-const demoThemesWrapper = document.querySelector(".box-demo-themes-wrapper");
-const boxDemoCards = document.querySelectorAll(".box-demo-cards");
+const triangleSolid = document.querySelectorAll(".triangle-solid");
+const triangleSolidNews = document.querySelector(".triangle-solid-news");
 
-// CUSTOMIZATION HEADER FADE UP EFFECT
+// SECTIONS OBSERVATION OBSERVER
 
-document,
-  addEventListener("scroll", () => {
-    // console.log(sectionHeadWrapper.getBoundingClientRect().top);
-    if (
-      sectionHeadWrapper.getBoundingClientRect().top < 800 &&
-      sectionHead.getBoundingClientRect().top < 800
-    ) {
-      sectionHead.classList.add("animateUp");
-      contentBox.classList.add("animateUp");
-      contentBox.style.transitionDelay = ".6s";
-    } else {
-      sectionHead.classList.remove("animateUp");
-      contentBox.classList.remove("animateUp");
-    }
-  });
+const observerFunc = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
 
-// BTN WRAPPER FADE IN & OUT AFTER SCROLL EFFECT
+  entry.target.classList.toggle("show", entry.isIntersecting);
 
-document,
-  addEventListener("scroll", () => {
-    // console.log(demoBtnsWrapper.getBoundingClientRect().top);
-    if (
-      demoBtnsWrapper.getBoundingClientRect().top < 560 &&
-      demoBtnsWrapper.getBoundingClientRect().top > 200
-    ) {
-      demoBtnsWrapper.style.opacity = "1";
-      demoBtnsWrapper.style.transition = ".5s";
-    } else {
-      demoBtnsWrapper.style.opacity = "0";
-    }
-  });
+  if (entry.isIntersecting) sectionsObs.unobserve(entry.target);
+};
 
-// CARDS FADE IN & OUT AFTER SCROLL EFFECT
+const observerOptions = {
+  root: null,
+  threshold: 0.1,
+  rootMargin: "-50px",
+};
 
-document.addEventListener("scroll", () => {
-  boxDemoCards.forEach((c) => {
-    // console.log(c.getBoundingClientRect().top);
-    if (
-      c.getBoundingClientRect().top < 500 &&
-      c.getBoundingClientRect().top > 200
-    ) {
-      c.style.opacity = "1";
-      c.style.transition = ".5s";
-    } else {
-      c.style.opacity = "0";
-    }
-  });
+const sectionsObs = new IntersectionObserver(observerFunc, observerOptions);
+
+sections.forEach((s) => {
+  sectionsObs.observe(s);
 });
+
+// TITLES OBSERVATION OBSERVER
+
+const sectionHeadWrapper = document.querySelectorAll(".section-headwrapper");
+const sectionHead = document.querySelectorAll(".section-head");
+const titles = document.querySelectorAll(".titles");
+
+const titleObsFunc = function (entries) {
+  const [entry] = entries;
+  console.log(entry);
+
+  entry.target.classList.toggle("showOpacity", entry.isIntersecting);
+
+  if (entry.isIntersecting) titlesObs.unobserve(entry.target);
+};
+
+const titlesObs = new IntersectionObserver(titleObsFunc, {
+  root: null,
+  threshold: 0.1,
+  rootMargin: "-120px",
+});
+
+titles.forEach((ti) => {
+  titlesObs.observe(ti);
+});
+
+// ********************************************************************* //
